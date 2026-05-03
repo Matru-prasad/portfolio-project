@@ -1,0 +1,20 @@
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 8px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  color: #4a90e2;
+}
+
+.sidebar-actions {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}

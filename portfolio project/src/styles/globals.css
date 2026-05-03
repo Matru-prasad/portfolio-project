@@ -1,0 +1,184 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Smooth rendering */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 10px;
+}
+
+/* ================= COMMON ELEMENTS ================= */
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+p {
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================= BUTTON ================= */
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+
+  /* keep your gradient */
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+
+  /* 🔥 ADD THIS */
+  box-shadow: 0 0 10px #3b82f6;
+}
+
+button:hover {
+  transform: scale(1.05);
+
+  /* keep gradient animation */
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  /* 🔥 ADD STRONG NEON GLOW */
+  box-shadow: 
+    0 0 20px #3b82f6,
+    0 0 40px #3b82f6,
+    0 0 60px rgba(59,130,246,0.6);
+}
+
+
+/* ================= CARD STYLE ================= */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(59, 130, 246, 0.2);
+}
+
+/* ================= ANIMATIONS ================= */
+
+/* Fade Up */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease;
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+/* Slide In Left */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation: slideLeft 0.8s ease;
+}
+
+/* ================= UTILITIES ================= */
+.container {
+  padding: 40px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+/* PAGE TRANSITION */
+.fade-page {
+  animation: pageFade 0.6s ease;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+h1, h2 {
+  text-shadow:
+    0 0 5px #3b82f6,
+    0 0 10px #3b82f6,
+    0 0 20px rgba(59,130,246,0.6);
+}

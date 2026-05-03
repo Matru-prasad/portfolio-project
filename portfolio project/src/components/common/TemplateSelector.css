@@ -1,0 +1,20 @@
+.template-selector {
+  margin-bottom: 20px;
+}
+
+.template-options {
+  display: flex;
+  gap: 10px;
+}
+
+.template-card {
+  padding: 15px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.template-card.active {
+  border-color: #4a90e2;
+  background: #eef5ff;
+}

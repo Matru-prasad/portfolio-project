@@ -1,0 +1,224 @@
+/* ===== MAIN WRAPPER ===== */
+.t3-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 100px;
+}
+
+/* ===== BACKGROUND STRIPS ===== */
+.t3-bg {
+  position: absolute;
+  background: #d6d6d6;
+  z-index: 0;
+}
+
+.t3-bg.top {
+  width: 100%;
+  height: 120px;
+  top: 0;
+  left: 0;
+}
+
+/* moved down so it doesn't cut text */
+.t3-bg.middle {
+  width: 100%;
+  height: 120px;
+  top: 50%;
+  left: 0;
+}
+
+.t3-bg.vertical {
+  width: 80px;
+  height: 100%;
+  left: 40%;
+  top: 0;
+  background: #c0c0c0;
+}
+
+/* ===== IMAGE ===== */
+.t3-image-frame {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  width: 160px;
+  height: 160px;
+  border: 6px solid #fff;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.t3-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== NAME BLOCK ===== */
+.t3-name-block {
+  position: absolute;
+  top: 60px;
+  left: 240px;
+  z-index: 5;
+}
+
+/* 🔥 PURE BLACK NAME */
+.t3-name {
+  margin: 0;
+  font-size: 34px;
+  color: #000;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+/* 🔥 PURE BLACK ROLE */
+.t3-name-block h2 {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+  background: transparent;
+  text-shadow: none;
+}
+
+/* ===== CONTACT TEXT ===== */
+.t3-name-block p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #444;
+}
+
+/* ===== CARD BASE ===== */
+.t3-card {
+  position: absolute;
+  background: #fff;
+  padding: 15px;
+  width: 260px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 2;
+
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* ===== HOVER EFFECT ===== */
+.t3-card:hover {
+  background: rgba(0,0,0,0.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* ===== POSITIONS ===== */
+.t3-card.left {
+  top: 260px;
+  left: 50px;
+  animation-delay: 0.2s;
+}
+
+/* 🔥 CENTER CARD FIX (NO ANIMATION CONFLICT) */
+.t3-card.left-bottom {
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0.4s;
+}
+
+.t3-card.right-top {
+  top: 180px;
+  right: 50px;
+  animation-delay: 0.2s;
+}
+
+.t3-card.right-bottom {
+  bottom: 120px;
+  right: 50px;
+  animation-delay: 0.4s;
+}
+
+/* ===== TEXT ===== */
+.t3-card h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #111;
+  font-weight: 600;
+}
+
+.t3-card p {
+  font-size: 13px;
+  margin: 3px 0;
+  color: #333;
+}
+
+.t3-card ul {
+  padding-left: 18px;
+  margin: 5px 0;
+}
+
+.t3-card li {
+  font-size: 13px;
+  margin-bottom: 3px;
+  color: #333;
+}
+
+/* ===== LINKS ===== */
+.t3-card a {
+  color: #000;
+  text-decoration: none;
+}
+
+.t3-card a:hover {
+  text-decoration: underline;
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.t3-download-wrapper {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.t3-download-btn {
+  padding: 12px 28px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.t3-download-btn:hover {
+  background: #222;
+  transform: scale(1.05);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== FORCE TEXT FIX ===== */
+.t3-card,
+.t3-card * {
+  color: #222 !important;
+}
+
+/* ===== SPACING ===== */
+.t3-card {
+  line-height: 1.5;
+}
