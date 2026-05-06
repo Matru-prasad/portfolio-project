@@ -8,7 +8,7 @@ const app = express();
 
 // ===== MIDDLEWARE =====
 app.use(cors({
-  origin: 'https://your-site-name.netlify.app' // Replace with your actual Netlify URL
+  origin: 'https://portfolio-project-xeff.onrender.com' // Replace with your actual Netlify URL
 }));
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
