@@ -8,7 +8,7 @@ export default function RoutesComponent() {
   return (
     <div className="page fade-page">
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="https://portfolio-project-xeff.onrender.com" element={<Landing />} />
         <Route path="/builder" element={<Builder />} />
         <Route path="/preview" element={<Preview />} />
       </Routes>
